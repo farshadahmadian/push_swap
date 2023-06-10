@@ -6,11 +6,7 @@
 /*   By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 08:59:51 by fahmadia          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/06/10 12:35:35 by fahmadia         ###   ########.fr       */
-=======
-/*   Updated: 2023/06/09 09:17:58 by fahmadia         ###   ########.fr       */
->>>>>>> e7668c073e565f2fdfcd9cf81439d717eb7c7fe4
+/*   Updated: 2023/06/10 15:27:26 by fahmadia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +27,7 @@ typedef struct num_list
 char**	push_swap(int argc, char** argv);
 int		validate_args(int argc, char **argv);
 char	*check_for_space(char *argv);
-<<<<<<< HEAD
-int	check_for_digits(int length, char **split_result, char *argv, int flag);
-=======
->>>>>>> e7668c073e565f2fdfcd9cf81439d717eb7c7fe4
+int		check_for_digits(int length, char **split_result, char *argv, int flag);
+char	*check_for_minus_or_plus(char *str);
 
 #endif
