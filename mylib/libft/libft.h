@@ -6,7 +6,11 @@
 /*   By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 12:24:49 by fahmadia          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/06/10 11:24:27 by fahmadia         ###   ########.fr       */
+=======
+/*   Updated: 2023/04/14 12:37:49 by fahmadia         ###   ########.fr       */
+>>>>>>> e7668c073e565f2fdfcd9cf81439d717eb7c7fe4
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +69,9 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+<<<<<<< HEAD
 int		strings_num(char const *s, char c);
+=======
+
+>>>>>>> e7668c073e565f2fdfcd9cf81439d717eb7c7fe4
 #endif

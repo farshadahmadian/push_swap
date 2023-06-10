@@ -6,7 +6,11 @@
 /*   By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 18:01:10 by fahmadia          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/06/10 11:24:13 by fahmadia         ###   ########.fr       */
+=======
+/*   Updated: 2023/04/14 12:35:53 by fahmadia         ###   ########.fr       */
+>>>>>>> e7668c073e565f2fdfcd9cf81439d717eb7c7fe4
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +28,11 @@ static char	**ft_free(int *flag, int j, char **strings)
 	return (NULL);
 }
 
+<<<<<<< HEAD
 int	strings_num(char const *s, char c)
+=======
+static int	strings_num(char const *s, char c)
+>>>>>>> e7668c073e565f2fdfcd9cf81439d717eb7c7fe4
 {
 	int		is_delimiter;
 	int		num;
