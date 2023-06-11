@@ -6,7 +6,7 @@
 /*   By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 12:48:24 by fahmadia          #+#    #+#             */
-/*   Updated: 2023/05/30 15:06:23 by fahmadia         ###   ########.fr       */
+/*   Updated: 2023/06/11 10:37:11 by fahmadia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@
 char	*get_next_line(int fd);
 char	*ft_my_substr(char const *s, unsigned int start, size_t len);
 char	*ft_my_strjoin(char *s1, char *s2);
-void	*ft_calloc(size_t count, size_t size);
+void	*ft_my_calloc(size_t count, size_t size);
 
 #endif

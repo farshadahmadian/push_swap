@@ -6,7 +6,7 @@
 #    By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/03 17:34:04 by fahmadia          #+#    #+#              #
-#    Updated: 2023/06/10 16:11:18 by fahmadia         ###   ########.fr        #
+#    Updated: 2023/06/11 17:30:20 by fahmadia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRCS = push_swap.c\
 	validate_args.c\
 	check_for_space.c\
 	check_for_digits.c\
-	check_for_minus_or_plus.c
+	check_for_minus_or_plus.c\
+	free_double_pointer.c
 
 OBJS_DIR = ./objs
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o)) 
@@ -29,6 +30,7 @@ NAME = push_swap
 
 all: $(NAME)
 
+
 $(NAME): $(OBJS) $(MYLIB_LIB) 
 	$(CC) $(OBJS) $(MYLIB_LIB) -o ${NAME}
 
@@ -40,13 +42,14 @@ $(MYLIB_LIB):
 	make -C $(MYLIB_DIR)
 
 clean:
-	rm -f $(OBJS)
-	rm -rf $(OBJS_DIR)
 	make clean -C $(MYLIB_DIR)
 
 fclean: clean
+	rm -f $(OBJS)
+	rm -rf $(OBJS_DIR)
 	make fclean -C $(MYLIB_DIR)
 	rm -f push_swap
+	rm -rf push_swap.dSYM
 
 re: fclean $(NAME)
 

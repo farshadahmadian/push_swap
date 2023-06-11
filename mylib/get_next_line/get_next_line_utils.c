@@ -6,13 +6,13 @@
 /*   By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 14:37:58 by fahmadia          #+#    #+#             */
-/*   Updated: 2023/05/30 15:11:40 by fahmadia         ###   ########.fr       */
+/*   Updated: 2023/06/11 10:35:36 by fahmadia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static size_t	ft_strlen(const char *s)
+static size_t	ft_my_strlen(const char *s)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ static size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-static void	*ft_memcpy(void *dst, const void *src, size_t n)
+static void	*ft_my_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*p_dst;
 	const char	*p_src;
@@ -57,14 +57,14 @@ char	*ft_my_strjoin(char *s1, char *s2)
 			return (NULL);
 		s1[0] = '\0';
 	}
-	s1_length = ft_strlen(s1);
-	s2_length = ft_strlen(s2);
+	s1_length = ft_my_strlen(s1);
+	s2_length = ft_my_strlen(s2);
 	total_size = s1_length + s2_length + 1;
 	p_new_string = malloc(total_size * sizeof(char));
 	if (!p_new_string || (!s1 && !s2))
 		return (NULL);
-	ft_memcpy(p_new_string, s1, s1_length + 1);
-	ft_memcpy(p_new_string + s1_length, s2, s2_length);
+	ft_my_memcpy(p_new_string, s1, s1_length + 1);
+	ft_my_memcpy(p_new_string + s1_length, s2, s2_length);
 	p_new_string[total_size - 1] = '\0';
 	free(s1);
 	return (p_new_string);
@@ -78,7 +78,7 @@ char	*ft_my_strdup(const char *s1)
 	size_t	i;
 
 	i = 0;
-	s1_length = ft_strlen(s1);
+	s1_length = ft_my_strlen(s1);
 	total_size = (s1_length + 1) * sizeof(char);
 	p_new_string = malloc(total_size);
 	if (!p_new_string)
@@ -104,10 +104,10 @@ char	*ft_my_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (start > ft_strlen(s))
+	if (start > ft_my_strlen(s))
 		return (ft_my_strdup(""));
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
+	if (len > ft_my_strlen(s + start))
+		len = ft_my_strlen(s + start);
 	total_size = (len + 1) * sizeof(char);
 	p_substring = malloc(total_size);
 	if (!p_substring)

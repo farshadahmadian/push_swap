@@ -6,7 +6,7 @@
 /*   By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 08:59:15 by fahmadia          #+#    #+#             */
-/*   Updated: 2023/06/10 16:10:24 by fahmadia         ###   ########.fr       */
+/*   Updated: 2023/06/11 17:29:14 by fahmadia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ int	main(int argc, char **argv)
 		printf("***** %s\n", argv[i]);
 		i++;
 	}
-	
 	return (0);
 }

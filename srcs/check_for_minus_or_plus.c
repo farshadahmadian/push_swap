@@ -6,19 +6,19 @@
 /*   By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 13:49:00 by fahmadia          #+#    #+#             */
-/*   Updated: 2023/06/10 16:10:19 by fahmadia         ###   ########.fr       */
+/*   Updated: 2023/06/11 17:28:47 by fahmadia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-char	*check_for_minus_or_plus(char *str)
+void	check_for_minus_or_plus(char *str, int* has_minus_or_plus)
 {
 	if (*str == '-' || *str == '+') 
 	{
-		*str = '\0';
-		str++;
-		ft_printf("remove minus or plus: %s\n", str);
+		*has_minus_or_plus = 1;
+		ft_printf("has_minus_or_plus: %d\n", *has_minus_or_plus);
 	}
-	return (str);
+	else
+		*has_minus_or_plus = 0;
 }
