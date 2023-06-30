@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_for_minus_or_plus.c                          :+:      :+:    :+:   */
+/*   convert_to_long.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fahmadia <fahmadia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/10 13:49:00 by fahmadia          #+#    #+#             */
-/*   Updated: 2023/06/11 17:28:47 by fahmadia         ###   ########.fr       */
+/*   Created: 2023/06/15 18:07:18 by fahmadia          #+#    #+#             */
+/*   Updated: 2023/06/15 18:14:52 by fahmadia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	check_for_minus_or_plus(char *str, int* has_minus_or_plus)
+long	convert_to_long(char *str)
 {
-	if (*str == '-' || *str == '+') 
+	long int	num;
+	int			sign;
+
+	num = 0;
+	sign = 1;
+	while (*str == '\t' || *str == '\n' || *str == '\v'
+		|| *str == '\r' || *str == '\f' || *str == ' ')
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		*has_minus_or_plus = 1;
-		ft_printf("has_minus_or_plus: %d\n", *has_minus_or_plus);
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	else
-		*has_minus_or_plus = 0;
-}
+	while (ft_isdigit(*str))
+	{
+		num = num * 10 + (*str - '0');
+		str++;
+	}
+	if (sign == -1)
+		num *= -1;
+	return (num);
+}	
